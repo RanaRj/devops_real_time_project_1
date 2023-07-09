@@ -34,7 +34,8 @@ stage('MODIFIED IMAGE TAG') {
                 
             }
         } 
-stage('SONAR SCANNER') {
+
+        stage('SONAR SCANNER') {
             environment {
             sonar_token = credentials('SONAR_TOKEN')
             }
