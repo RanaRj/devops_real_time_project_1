@@ -47,6 +47,12 @@ stage('MODIFIED IMAGE TAG') {
             }
         } 
 
+
+         stage('COPY JAR & DOCKERFILE') {
+            steps {
+                sh 'ansible-playbook playbooks/create_directory.yml'
+            }
+        }
         
     }
 }
