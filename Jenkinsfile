@@ -27,6 +27,12 @@ stage('MODIFIED IMAGE TAG') {
                    '''
             }            
         }
-        
+       
+        stage('BUILD') {
+            steps {
+                sh 'mvn clean install package'
+                
+            }
+        } 
     }
 }
